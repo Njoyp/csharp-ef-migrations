@@ -24,7 +24,8 @@ namespace ef.intro.wwwapi.Repository
         {            
             using (var db = new LibraryContext())
             {
-                return db.Authors.Include(a => a.Books).ToList();
+                return db.Authors.Include(a => a.Books).ThenInclude(b => b.Publisher).ToList();
+
             }
             return null;
         }
@@ -33,7 +34,8 @@ namespace ef.intro.wwwapi.Repository
         {
             using (var db = new LibraryContext())
             {
-                throw new NotImplementedException(); //TODO: Remove this line and add code
+                db.Books.Add(book);
+                db.SaveChanges(); //did TODO
                 return true;
             };
             return false;
@@ -43,29 +45,38 @@ namespace ef.intro.wwwapi.Repository
         {
             using (var db = new LibraryContext())
             {
-                throw new NotImplementedException(); //TODO: Remove this line and add code
-                return true;
-            };
-            return false;
+                var a = db.Authors.Find(id);
+                if (a != null)
+                {
+                    db.Authors.Remove(a);
+                    db.SaveChanges();
+                    return true;        //did TODO
+                }
+                return false;
+             };
         }
 
         public bool DeleteBook(int id)
         {
             using (var db = new LibraryContext())
             {
-                throw new NotImplementedException(); //TODO: Remove this line and add code
-                return true;
+                var b = db.Books.Find(id);
+                if (b != null)
+                {
+                    db.Books.Remove(b);
+                    db.SaveChanges();
+                    return true;        //did TODO
+                }
+                return false;
             };
-            return false;
         }
 
-       
 
         public IEnumerable<Book> GetAllBooks()
         {
             using (var db = new LibraryContext())
             {
-                return db.Books.ToList();
+                return db.Books.Include(x => x.Publisher).ToList();
             }
             return null;
         }
@@ -75,7 +86,7 @@ namespace ef.intro.wwwapi.Repository
             Author result;
             using (var db = new LibraryContext())
             {
-                throw new NotImplementedException(); //TODO: Remove this line and add code                
+                result = db.Authors.Find(id); // did TODO               
             };
             return result;
         }
@@ -85,7 +96,8 @@ namespace ef.intro.wwwapi.Repository
             Book result;
             using (var db = new LibraryContext())
             {
-                throw new NotImplementedException(); //TODO: Remove this line and add code              
+                result = db.Books.Find(id); // did TODO               
+
             };
             return result;
         }
@@ -94,8 +106,12 @@ namespace ef.intro.wwwapi.Repository
         {
             using (var db = new LibraryContext())
             {
-                throw new NotImplementedException(); //TODO: Remove this line and add code
-                return true;
+                db.Authors.Find(author.Id).FirstName = author.FirstName;
+                db.Authors.Find(author.Id).LastName = author.LastName;
+                db.Authors.Find(author.Id).Email = author.Email;
+                db.Authors.Find(author.Id).Books = author.Books;
+                db.SaveChanges();
+                return true; // did TODO
             };
             return false;
         }
@@ -104,10 +120,71 @@ namespace ef.intro.wwwapi.Repository
         {
             using (var db = new LibraryContext())
             {
-                throw new NotImplementedException(); //TODO: Remove this line and add code
-                return true;
+               db.Books.Find(book.Id).Title = book.Title;
+                db.Books.Find(book.Id).AuthorId = book.AuthorId;
+                db.SaveChanges();
+                return true; // did TODO
             };
             return false;
+        }
+ 
+        public IEnumerable<Publisher> GetAllPublishers()
+        {
+            //throw new NotImplementedException();
+
+            using (var db = new LibraryContext())
+            {
+                return db.Publishers.ToList();
+            }
+            return null;
+        }
+
+        public Publisher GetAPublisher(int id)
+        {
+            Publisher result;
+            using(var db = new LibraryContext())
+            {
+                result = db.Publishers.Find(id);
+            }
+            return result;
+        }
+
+        public bool AddPublisher(Publisher publisher)
+        {
+            using(var db = new LibraryContext())
+            {
+                db.Publishers.Add(publisher);
+                db.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool UpdatePublisher(Publisher publisher)
+        {
+            using(var db = new LibraryContext())
+            {
+                db.Publishers.Find(publisher.Id).Name = publisher.Name;
+                //db.Publishers.Update(publisher); could this one like do the same?
+                db.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool DeletePublisher(int id)
+        {
+            using (var db = new LibraryContext())
+            {
+                var a = db.Publishers.Find(id);
+                if (a != null)
+                {
+                    db.Publishers.Remove(a);
+                    db.SaveChanges();
+                    return true;        
+                }
+                return false;
+            };
         }
     }
 }

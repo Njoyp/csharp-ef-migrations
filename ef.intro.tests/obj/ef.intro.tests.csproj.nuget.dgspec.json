@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Boolean\\csharp-ef-migrations\\ef.intro.tests\\ef.intro.tests.csproj": {}
+    "C:\\Users\\nikit\\Desktop\\Boolean\\backend\\week6\\csharp-ef-migrations\\ef.intro.tests\\ef.intro.tests.csproj": {}
   },
   "projects": {
-    "C:\\Boolean\\csharp-ef-migrations\\ef.intro.tests\\ef.intro.tests.csproj": {
+    "C:\\Users\\nikit\\Desktop\\Boolean\\backend\\week6\\csharp-ef-migrations\\ef.intro.tests\\ef.intro.tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Boolean\\csharp-ef-migrations\\ef.intro.tests\\ef.intro.tests.csproj",
+        "projectUniqueName": "C:\\Users\\nikit\\Desktop\\Boolean\\backend\\week6\\csharp-ef-migrations\\ef.intro.tests\\ef.intro.tests.csproj",
         "projectName": "ef.intro.tests",
-        "projectPath": "C:\\Boolean\\csharp-ef-migrations\\ef.intro.tests\\ef.intro.tests.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Boolean\\csharp-ef-migrations\\ef.intro.tests\\obj\\",
+        "projectPath": "C:\\Users\\nikit\\Desktop\\Boolean\\backend\\week6\\csharp-ef-migrations\\ef.intro.tests\\ef.intro.tests.csproj",
+        "packagesPath": "C:\\Users\\nikit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nikit\\Desktop\\Boolean\\backend\\week6\\csharp-ef-migrations\\ef.intro.tests\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nikit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Boolean\\csharp-ef-migrations\\ef.intro.wwwapi\\ef.intro.wwwapi.csproj": {
-                "projectPath": "C:\\Boolean\\csharp-ef-migrations\\ef.intro.wwwapi\\ef.intro.wwwapi.csproj"
+              "C:\\Users\\nikit\\Desktop\\Boolean\\backend\\week6\\csharp-ef-migrations\\ef.intro.wwwapi\\ef.intro.wwwapi.csproj": {
+                "projectPath": "C:\\Users\\nikit\\Desktop\\Boolean\\backend\\week6\\csharp-ef-migrations\\ef.intro.wwwapi\\ef.intro.wwwapi.csproj"
               }
             }
           }
@@ -76,24 +73,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Boolean\\csharp-ef-migrations\\ef.intro.wwwapi\\ef.intro.wwwapi.csproj": {
+    "C:\\Users\\nikit\\Desktop\\Boolean\\backend\\week6\\csharp-ef-migrations\\ef.intro.wwwapi\\ef.intro.wwwapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Boolean\\csharp-ef-migrations\\ef.intro.wwwapi\\ef.intro.wwwapi.csproj",
+        "projectUniqueName": "C:\\Users\\nikit\\Desktop\\Boolean\\backend\\week6\\csharp-ef-migrations\\ef.intro.wwwapi\\ef.intro.wwwapi.csproj",
         "projectName": "ef.intro.wwwapi",
-        "projectPath": "C:\\Boolean\\csharp-ef-migrations\\ef.intro.wwwapi\\ef.intro.wwwapi.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Boolean\\csharp-ef-migrations\\ef.intro.wwwapi\\obj\\",
+        "projectPath": "C:\\Users\\nikit\\Desktop\\Boolean\\backend\\week6\\csharp-ef-migrations\\ef.intro.wwwapi\\ef.intro.wwwapi.csproj",
+        "packagesPath": "C:\\Users\\nikit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nikit\\Desktop\\Boolean\\backend\\week6\\csharp-ef-migrations\\ef.intro.wwwapi\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nikit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -101,6 +95,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -127,6 +122,22 @@
               "target": "Package",
               "version": "[7.0.5, )"
             },
+            "Microsoft.entityframeworkcore.design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.entityframeworkcore.relational": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.entityframeworkcore.tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[7.0.4, )"
@@ -134,6 +145,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "newtonsoft.json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
@@ -155,7 +170,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

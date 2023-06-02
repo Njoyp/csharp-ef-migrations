@@ -17,6 +17,10 @@ namespace ef.intro.wwwapi.Repository
         bool UpdateBook(Book book);
         bool DeleteBook(int id);
 
-
+        IEnumerable<Publisher> GetAllPublishers();
+        Publisher GetAPublisher(int id);
+        bool AddPublisher(Publisher publisher);
+        bool UpdatePublisher(Publisher publisher);
+        bool DeletePublisher(int id);
     }
 }
